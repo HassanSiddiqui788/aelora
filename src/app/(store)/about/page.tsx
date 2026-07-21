@@ -52,7 +52,7 @@ export default function AboutPage() {
           
           <div className="relative aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-158403037081-f37b7bb4fa8e?q=80&w=800"
+              src="https://images.unsplash.com/photo-1699537317988-b0d94b666661?q=80&w=800"
               alt="Luxury fabric detail draping"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -154,7 +154,7 @@ export default function AboutPage() {
         {/* Section 4: Call To Action to Collections */}
         <div className="relative aspect-[21/9] bg-neutral-900 flex items-center justify-center text-center overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800"
+            src="https://images.unsplash.com/photo-1457545195570-67f207084966?q=80&w=800"
             alt="Sourcing cashmere yarns"
             fill
             sizes="100vw"

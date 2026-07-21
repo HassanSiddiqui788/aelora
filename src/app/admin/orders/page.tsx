@@ -29,7 +29,7 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 
 const orders = [
   {
@@ -123,7 +123,7 @@ export default function AdminOrdersPage() {
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Orders</h2>
           <p className="text-muted-foreground">
-            Manage your store's orders and track their delivery status.
+            Manage your store&apos;s orders and track their delivery status.
           </p>
         </div>
         <div className="flex items-center gap-2">

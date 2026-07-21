@@ -39,7 +39,7 @@ export default function AdminMediaPage() {
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Media Library</h2>
           <p className="text-muted-foreground">
-            Manage your store's images, videos, and documents centrally.
+            Manage your store&apos;s images, videos, and documents centrally.
           </p>
         </div>
         <div className="flex items-center gap-2">

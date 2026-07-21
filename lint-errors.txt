@@ -1,0 +1,48 @@
+[
+  {
+    "filePath": "C:\\hasssan\\scarfs-website\\src\\lib\\mongodb.ts",
+    "messages": [
+      {
+        "ruleId": null,
+        "message": "Unused eslint-disable directive (no problems were reported from 'no-var').",
+        "line": 23,
+        "column": 3,
+        "severity": 1,
+        "nodeType": null,
+        "fix": {
+          "range": [
+            565,
+            599
+          ],
+          "text": " "
+        }
+      },
+      {
+        "ruleId": "prefer-const",
+        "severity": 2,
+        "message": "'cached' is never reassigned. Use 'const' instead.",
+        "line": 27,
+        "column": 5,
+        "nodeType": "Identifier",
+        "messageId": "useConst",
+        "endLine": 27,
+        "endColumn": 27,
+        "fix": {
+          "range": [
+            647,
+            725
+          ],
+          "text": "const cached: CachedMongoose = global.mongoose || { conn: null, promise: null };"
+        }
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 1,
+    "fatalErrorCount": 0,
+    "warningCount": 1,
+    "fixableErrorCount": 1,
+    "fixableWarningCount": 1,
+    "source": "import mongoose from 'mongoose';\n\n// Ensure the MONGODB_URI variable is properly typed\nconst MONGODB_URI = process.env.MONGODB_URI!;\n\nif (!MONGODB_URI) {\n  throw new Error(\n    'Please define the MONGODB_URI environment variable inside .env.local or .env'\n  );\n}\n\n/**\n * Global is used here to maintain a cached connection across hot reloads\n * in development. This prevents connections growing exponentially\n * during API Route usage.\n */\ninterface CachedMongoose {\n  conn: typeof mongoose | null;\n  promise: Promise<typeof mongoose> | null;\n}\n\ndeclare global {\n  // eslint-disable-next-line no-var\n  var mongoose: CachedMongoose | undefined;\n}\n\nlet cached: CachedMongoose = global.mongoose || { conn: null, promise: null };\n\nif (!global.mongoose) {\n  global.mongoose = cached;\n}\n\nasync function connectToDatabase() {\n  if (cached.conn) {\n    return cached.conn;\n  }\n\n  if (!cached.promise) {\n    const opts = {\n      bufferCommands: false,\n    };\n\n    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {\n      return mongoose;\n    });\n  }\n\n  try {\n    cached.conn = await cached.promise;\n  } catch (e) {\n    cached.promise = null;\n    throw e;\n  }\n\n  return cached.conn;\n}\n\nexport default connectToDatabase;\n",
+    "usedDeprecatedRules": []
+  }
+]

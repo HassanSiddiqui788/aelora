@@ -1,10 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { Star, CheckCircle, XCircle, Search, MessageSquare, MoreHorizontal } from "lucide-react";
+import { Star, CheckCircle, XCircle, Search, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardFooter, CardDescription, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 

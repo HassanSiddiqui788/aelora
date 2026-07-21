@@ -51,7 +51,7 @@ export default function AdminBannersPage() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {banners.map((banner, i) => (
+        {banners.map((banner) => (
           <Card key={banner.id} className="overflow-hidden flex flex-col">
             <div className="aspect-[21/9] bg-muted relative group flex items-center justify-center border-b">
               {/* Dummy Image Representation */}

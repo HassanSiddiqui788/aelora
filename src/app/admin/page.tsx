@@ -15,7 +15,7 @@ import {
   YAxis,
   Tooltip,
 } from "recharts";
-import { Badge } from "@/components/ui/badge";
+
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowUpRight, DollarSign, Package, Users, ShoppingCart } from "lucide-react";
@@ -81,7 +81,7 @@ export default function AdminDashboardPage() {
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
           <p className="text-muted-foreground">
-            Overview of your store's performance and recent activities.
+            Overview of your store&apos;s performance and recent activities.
           </p>
         </div>
         <div className="flex items-center gap-2">

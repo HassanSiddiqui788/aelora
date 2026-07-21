@@ -52,7 +52,7 @@ export default function AdminSettingsPage() {
                 <CardHeader>
                   <CardTitle>Store Details</CardTitle>
                   <CardDescription>
-                    Your store's name, description, and contact information.
+                    Your store&apos;s name, description, and contact information.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">

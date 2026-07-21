@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Globe, Type, FileImage, LayoutTemplate, Save, Undo } from "lucide-react";
+import { Type, LayoutTemplate, Save, Undo } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -22,7 +22,7 @@ export default function AdminContentPage() {
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Website Content</h2>
           <p className="text-muted-foreground">
-            Manage your store's text, typography, and page structures.
+            Manage your store&apos;s text, typography, and page structures.
           </p>
         </div>
         <div className="flex items-center gap-2">
