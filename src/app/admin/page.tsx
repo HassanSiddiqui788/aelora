@@ -164,7 +164,7 @@ export default function AdminDashboardPage() {
                   axisLine={false}
                   tickFormatter={(value) => `$${value}`}
                 />
-                <Tooltip 
+                <Tooltip
                   cursor={{ fill: 'rgba(0, 0, 0, 0.1)' }}
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                 />
